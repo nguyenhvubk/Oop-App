@@ -9,7 +9,7 @@
 import Foundation
 
 class Player: Charactor {
-    private var _name = "Player"
+    private var _name: String = "Player"
     
     var name: String {
         get {
@@ -21,6 +21,10 @@ class Player: Charactor {
     
     var inventory: [String] {
         return _inventory
+    }
+    
+    func addItemInventory (item: String){
+        _inventory.append(item)
     }
     
     convenience init (name: String, hp: Int, attackPwr: Int){
